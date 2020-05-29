@@ -13,7 +13,7 @@ $FORCE_LFMROOT_PREFIX = '';
 if (isset($_SERVER['HTTP_LFM_ROOT'])) { // 没有传递 header LFM_ROOT，则拒绝访问。
     $FORCE_LFMROOT_PREFIX = $_SERVER['HTTP_LFM_ROOT'];
 } else {
-    die('Forbidden');
+    // die('Forbidden');
 }
 
 return [
