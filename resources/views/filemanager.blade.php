@@ -11,10 +11,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">
+        <!--<link rel="stylesheet" href="{{ asset('vendor/file-manager/css/file-manager.css') }}">-->
+        <link rel="stylesheet" href="/vendor/file-manager/css/file-manager.css">
         <style>
         </style>
-        <script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>
+        <!--<script src="{{ asset('vendor/file-manager/js/file-manager.js') }}"></script>-->
+        <script src="/vendor/file-manager/js/file-manager.js"></script>
     </head>
     <body>
         <div style="height: 600px;">
@@ -22,3 +24,9 @@
         </div>
     </body>
 </html>
+<?php
+// php artisan cache:clear
+// php artisan config:clear
+// php artisan config:cache
+// docker run --name lfm -d -v /home/lee-working/projects/www:/var/www hub.linakesi.com/webdev/lfm
+?>
