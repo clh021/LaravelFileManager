@@ -22,3 +22,9 @@ Route::get('/php', function () {
     // return view('welcome');
     return view('phpinfo');
 });
+
+
+Route::get('/healthcheck', function () {
+    // return view('welcome');
+    return "healthcheck on ".date("Y-m-d H:i:s");
+});

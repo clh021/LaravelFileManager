@@ -10,7 +10,8 @@ FROM leehom/docker.home:fpm-08215
 MAINTAINER leehom Chen <clh021@gmail.com>
 LABEL maintainer="leehom Chen <clh021@gmail.com>"
 ADD ./www /var/www
+ADD ./www/build/php.ini /usr/local/etc/php/
 WORKDIR /var/www
 CMD php ./artisan serve --port=80 --host=0.0.0.0
 EXPOSE 80
-HEALTHCHECK --interval=1m CMD curl -f http://localhost/ || exit 1
+HEALTHCHECK --interval=1m CMD curl -f http://localhost/healthcheck || exit 1
